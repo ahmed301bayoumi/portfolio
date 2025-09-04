@@ -354,3 +354,7 @@ header .header-content img{max-width:450px}
   outline: 2px solid currentColor;
   outline-offset: 4px;
 }
+.skills-content .item a{display:inline-flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit}
+.skills-content .item a img{cursor:pointer;transition:transform .15s}
+.skills-content .item a:hover img{transform:translateY(-2px)}
+.skills-content .item a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
