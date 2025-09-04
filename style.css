@@ -327,3 +327,30 @@ header .header-content img{max-width:450px}
   }
 }
 
+/* خلّي الكارت كله (الصورة + النص) قابل للنقر ومن غير تغيير لون/تسطير */
+.skills-content .item a {
+  display: inline-flex;      /* يخلي الصورة والنص جوّا اللينك */
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;     /* يشيل التسطر الافتراضي */
+  color: inherit;            /* يحافظ على لون النص من الأب */
+}
+
+.skills-content .item a:visited {
+  color: inherit;            /* يفضل نفس اللون حتى بعد الزيارة */
+}
+
+.skills-content .item a img {
+  cursor: pointer;
+  transition: transform .15s;
+}
+
+.skills-content .item a:hover img {
+  transform: translateY(-2px);
+}
+
+/* إتاحة الوصول: مظهر واضح عند التنقل بالكيبورد */
+.skills-content .item a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
